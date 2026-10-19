@@ -14,7 +14,7 @@ falaram:
   - ICARO LUIZ ALBAR EDUARDO
   - Frederico Medeiros De Paiva
   - Diogo Leite Mesquita
-projeto: "[[Maria - atendimento automatizado]]"
+projeto: "[[Compartilhamento da MarIA com a Bahia]]"
 fonte: https://docs.google.com/document/d/1EtveLAz5I6Q-mqmRdAnlZdoHPUufYX-DwGFbErodUlQ/edit
 gravacao: https://drive.google.com/file/d/1v_OHZatpjYT_tXO9m1mrCQvcqzsno5rm/view?usp=drive_web
 origem: anotações automáticas do Gemini (Google Meet)
@@ -122,5 +122,7 @@ Definida a necessidade de estimativas de esforço e estruturação de reuniões 
 **Próximos Passos e Encerramento das Atividades**: CAMILA MAURA MOREIRA DA SILVA ressalta a importância de apoiar a estruturação interna da outra defensoria e gerenciar a migração de código simultaneamente. Para os próximos encaminhamentos, CAMILA tentará realocar a reunião com Braida e Gustavo para o dia seguinte, e Diogo Leite Mesquita acompanhará o envio de respostas aos e-mails de Ricardo (01:17:37). IRAN TEIXEIRA DE OLIVEIRA menciona que utilizará ferramentas de inteligência artificial para estruturar e refinar suas ideias técnicas. O encerramento ocorre com o alinhamento geral das tarefas e compromissos assumidos pela equipe (01:19:21).
 
 ## Relacionado
+- [[Compartilhamento da MarIA com a Bahia]]
+- [[Análise e Planejamento de Transferência Tecnológica - MarIA (DPRJ-DPBA)]]
 - [[Maria - atendimento automatizado]]
 - [[2026-10-15 - Compartilhamento MarIA - Melhores práticas (transcrição)]]

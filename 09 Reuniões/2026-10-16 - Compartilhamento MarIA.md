@@ -17,7 +17,7 @@ falaram:
   - Gustavo Pinto
   - Diogo Leite Mesquita
   - Talita Vieira Ribeiro
-projeto: "[[Maria - atendimento automatizado]]"
+projeto: "[[Compartilhamento da MarIA com a Bahia]]"
 fonte: https://docs.google.com/document/d/1lP8Wd8ouGzb3yUorPanQdSgM4rkAxHkqUtFfGdG6v3Q/edit
 gravacao: https://drive.google.com/file/d/130uNKh5KVLuM6Jpze83D7d7pWJfVBcRX/view?usp=drive_web
 origem: anotações automáticas do Gemini (Google Meet)
@@ -105,5 +105,7 @@ Filipe listará melhorias e Gustavo calculará os esforços correspondentes.
 **Encerramento e Compartilhamento de Documentos**: Diogo Leite Mesquita reforça a importância de manter reuniões de alinhamento caso surjam demandas irredutíveis da parte externa (01:25:23). Camila Maura Moreira da Silva confirma o recebimento do fluxo aprovado pela Dr. Suan e o envio da listagem de documentos de pré-atendimento para Filipe Braida do Carmo, Talita Vieira Ribeiro, Gustavo Pinto e ICARO LUIZ ALBAR EDUARDO (01:26:23). Filipe Braida do Carmo relata que o sistema já está gerando a petição com sucesso, encerrando a reunião com cumprimentos de fim de semana entre todas as pessoas participantes (01:27:18).
 
 ## Relacionado
+- [[Compartilhamento da MarIA com a Bahia]]
+- [[Análise e Planejamento de Transferência Tecnológica - MarIA (DPRJ-DPBA)]]
 - [[Maria - atendimento automatizado]]
 - [[2026-10-16 - Compartilhamento MarIA (transcrição)]]
