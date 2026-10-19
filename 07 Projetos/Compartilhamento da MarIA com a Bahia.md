@@ -10,7 +10,7 @@ envolve_ia: sim
 sistema_ia: "[[Maria]]"
 inicio: 2026-10-15
 prazo: 
-dedicacao: tempo reservado toda semana
+dedicacao: quartas, 14h às 15h (semanal)
 tags:
   - projeto
   - maria
@@ -34,7 +34,7 @@ Definir e executar o modelo de transferência da MarIA para a DPBA: o que a Bahi
 
 ### Rotina
 - Vamos reservar um tempo toda semana para este projeto.
-- Dia e horário: 
+- Dia e horário: quartas, das 14h às 15h, a partir de 21/10/2026 (bloqueado na agenda).
 
 ### Frentes
 | Frente | Pergunta principal | Quem |
