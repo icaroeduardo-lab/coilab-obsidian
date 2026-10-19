@@ -4,7 +4,7 @@ tipo: inicio
 
 # COILAB: base de conhecimento
 
-Página inicial do COILAB (Coordenação do Laboratório de Inovação e Inteligência Artificial da DPRJ): cultura, treinamentos, cursos, eventos, reuniões, normativos, projetos e inventário de IA.
+Página inicial do COILAB (Coordenação do Laboratório de Inovação e Inteligência Artificial da DPRJ): cultura, treinamentos, cursos, eventos, reuniões, normativos, projetos, inventário de IA e sistemas integrados.
 
 ## Como usar
 
@@ -54,6 +54,25 @@ views:
       - ambiente
       - homologado_cgti
       - proxima_reavaliacao
+```
+
+## Sistemas
+
+```base
+filters:
+  and:
+    - file.inFolder("10 Sistemas")
+    - 'tipo == "sistema"'
+views:
+  - type: table
+    name: Sistemas integrados
+    order:
+      - file.name
+      - status
+      - uso_no_coilab
+      - autenticacao
+      - projetos
+      - atualizado_em
 ```
 
 ## Cultura

@@ -1,6 +1,6 @@
 # Cofre do COILAB (Obsidian)
 
-Base de conhecimento do COILAB (Laboratório de Inovação e IA da DPRJ): cultura, treinamentos, cursos, normativos, inventário de IA, projetos e eventos. Este repositório é o próprio cofre do Obsidian; a nota de entrada é `00 Início/Início.md`.
+Base de conhecimento do COILAB (Laboratório de Inovação e IA da DPRJ): cultura, treinamentos, cursos, normativos, inventário de IA, projetos, eventos, reuniões e sistemas integrados. Este repositório é o próprio cofre do Obsidian; a nota de entrada é `00 Início/Início.md`.
 
 ## Como usar no desktop
 
@@ -40,6 +40,7 @@ Para sincronizar sem usar o terminal, você pode instalar o plugin da comunidade
 - `07 Projetos` – projetos do laboratório
 - `08 Eventos` – eventos e palestras
 - `09 Reuniões` – atas de reuniões e, em `Transcrições`, as transcrições completas
+- `10 Sistemas` – sistemas externos integrados (ex.: Tykhe), com as especificações originais em `anexos`
 - `99 Modelos` – modelos usados pelo plugin Templates
 
 As configurações pessoais do Obsidian (layout da área de trabalho, cache) ficam fora do Git via `.gitignore`; só as configurações compartilhadas, como `.obsidian/templates.json`, são versionadas.
