@@ -76,6 +76,7 @@ views:
 ```
 
 ## Relacionado
+- [[Compartilhamento da MarIA com a Bahia]]
 - [[Maria]] (inventário de IA)
 - [[Intimação por WhatsApp - boas práticas]]
 - [[Cidadania Digital - TJMT e Governo de MT]]
