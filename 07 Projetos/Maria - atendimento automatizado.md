@@ -78,5 +78,6 @@ views:
 ## Relacionado
 - [[Compartilhamento da MarIA com a Bahia]]
 - [[Maria]] (inventário de IA)
+- [[Tykhe]] (sistema integrado: canal do cidadão)
 - [[Intimação por WhatsApp - boas práticas]]
 - [[Cidadania Digital - TJMT e Governo de MT]]
