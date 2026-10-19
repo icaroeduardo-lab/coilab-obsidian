@@ -39,6 +39,7 @@ Para sincronizar sem usar o terminal, você pode instalar o plugin da comunidade
 - `06 Inventário de IA` – sistemas de IA em uso
 - `07 Projetos` – projetos do laboratório
 - `08 Eventos` – eventos e palestras
+- `09 Reuniões` – atas de reuniões e, em `Transcrições`, as transcrições completas
 - `99 Modelos` – modelos usados pelo plugin Templates
 
 As configurações pessoais do Obsidian (layout da área de trabalho, cache) ficam fora do Git via `.gitignore`; só as configurações compartilhadas, como `.obsidian/templates.json`, são versionadas.

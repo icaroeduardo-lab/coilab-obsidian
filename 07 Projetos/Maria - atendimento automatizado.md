@@ -59,6 +59,22 @@ Fluxos implementados: **pessoa presa**, **violência doméstica** e um fluxo pad
 ## Aprendizados
 - 2026-08-31: a reescrita de perguntas por IA foi desligada depois de gerar frases estranhas em produção (ex.: "Essa é o Fulano presa?"). As perguntas voltaram a ter texto fixo.
 
+## Reuniões
+
+```base
+filters:
+  and:
+    - file.inFolder("09 Reuniões")
+    - 'tipo == "reuniao"'
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Reuniões do projeto
+    order:
+      - file.name
+      - data
+```
+
 ## Relacionado
 - [[Maria]] (inventário de IA)
 - [[Intimação por WhatsApp - boas práticas]]

@@ -4,7 +4,7 @@ tipo: inicio
 
 # COILAB: base de conhecimento
 
-Página inicial do COILAB (Coordenação do Laboratório de Inovação e Inteligência Artificial da DPRJ): cultura, treinamentos, cursos, eventos, normativos, projetos e inventário de IA.
+Página inicial do COILAB (Coordenação do Laboratório de Inovação e Inteligência Artificial da DPRJ): cultura, treinamentos, cursos, eventos, reuniões, normativos, projetos e inventário de IA.
 
 ## Como usar
 
@@ -144,6 +144,23 @@ views:
       - data
       - instituicao
       - tema
+```
+
+## Reuniões
+
+```base
+filters:
+  and:
+    - file.inFolder("09 Reuniões")
+    - 'tipo == "reuniao"'
+views:
+  - type: table
+    name: Reuniões
+    order:
+      - file.name
+      - data
+      - projeto
+      - falaram
 ```
 
 ## Normativos
