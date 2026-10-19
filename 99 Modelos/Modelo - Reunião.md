@@ -3,6 +3,7 @@ tipo: reuniao
 data: "{{date}}"
 hora: 
 convidados: 
+falaram: 
 projeto: 
 fonte: 
 gravacao: 

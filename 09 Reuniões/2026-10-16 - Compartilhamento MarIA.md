@@ -8,6 +8,15 @@ convidados:
   - Frederico Medeiros De Paiva
   - CAMILA MAURA MOREIRA DA SILVA
   - IRAN TEIXEIRA DE OLIVEIRA
+falaram:
+  - CAMILA MAURA MOREIRA DA SILVA
+  - Filipe Braida do Carmo
+  - IRAN TEIXEIRA DE OLIVEIRA
+  - Frederico Medeiros De Paiva
+  - ICARO LUIZ ALBAR EDUARDO
+  - Gustavo Pinto
+  - Diogo Leite Mesquita
+  - Talita Vieira Ribeiro
 projeto: "[[Maria - atendimento automatizado]]"
 fonte: https://docs.google.com/document/d/1lP8Wd8ouGzb3yUorPanQdSgM4rkAxHkqUtFfGdG6v3Q/edit
 gravacao: https://drive.google.com/file/d/130uNKh5KVLuM6Jpze83D7d7pWJfVBcRX/view?usp=drive_web

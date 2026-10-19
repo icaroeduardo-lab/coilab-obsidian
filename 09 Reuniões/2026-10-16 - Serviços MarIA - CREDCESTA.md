@@ -6,6 +6,13 @@ convidados:
   - ICARO LUIZ ALBAR EDUARDO
   - CAMILA MAURA MOREIRA DA SILVA
   - Suyan Dos Santos Liberatori
+falaram:
+  - Filipe Braida do Carmo
+  - CAMILA MAURA MOREIRA DA SILVA
+  - ICARO LUIZ ALBAR EDUARDO
+  - Suyan Dos Santos Liberatori
+  - Gustavo Pinto
+  - Talita Vieira Ribeiro
 projeto: "[[Maria - atendimento automatizado]]"
 fonte: https://docs.google.com/document/d/1seaUTtrloFLXpOpOiDVCL17I5411MJRgYaHYr2dqaxQ/edit
 gravacao: https://drive.google.com/file/d/1qxsJriAAkLVhrfNuY6x0t2d57y7Q6gmI/view?usp=drive_web
