@@ -20,7 +20,27 @@ tags:
 ## Decisões
 
 ## Próximas etapas
-- [Responsável] Tarefa
+Crie uma nota por tarefa em `11 Tarefas` (Modelo - Tarefa) com `origem` apontando para esta reunião.
+
+```base
+filters:
+  and:
+    - 'tipo == "tarefa"'
+    - file.hasLink(this.file)
+formulas:
+  situacao: 'if(status == "feita", "feita", if(prazo < today(), "atrasada", status))'
+views:
+  - type: table
+    name: Tarefas desta reunião
+    order:
+      - file.name
+      - responsavel
+      - prazo
+      - formula.situacao
+    sort:
+      - property: note.prazo
+        direction: ASC
+```
 
 ## Relacionado
 - 

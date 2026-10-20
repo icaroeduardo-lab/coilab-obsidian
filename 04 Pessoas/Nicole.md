@@ -6,6 +6,7 @@ entrada:
 projetos:
   - "[[Maria - atendimento automatizado]]"
 proxima_entrega: 2026-11-05
+ultima_conversa: 
 tags:
   - pessoa
 ---
@@ -15,16 +16,49 @@ tags:
 > Função e data de entrada ainda não registradas: preencha quando souber.
 
 ## Tarefas atuais
-Combinadas em [[2026-10-20 - Reunião quinzenal]]; acompanhamento nas tarefas do iLab no Google Tarefas.
-- Implantação do orquestrador em homolog (prazo 05/11/2026)
-- Testes do orquestrador com o CRC (prazo 05/11/2026)
-- Elaboração do orquestrador de múltiplos fluxos (prazo 05/11/2026)
+Tarefas em aberto desta pessoa (fonte: [[Pendências]]).
+
+```base
+filters:
+  and:
+    - 'tipo == "tarefa"'
+    - file.hasLink(this.file)
+    - 'status != "feita"'
+formulas:
+  situacao: 'if(status == "feita", "feita", if(prazo < today(), "atrasada", status))'
+views:
+  - type: table
+    name: Tarefas em aberto
+    order:
+      - file.name
+      - responsavel
+      - prazo
+      - formula.situacao
+    sort:
+      - property: note.prazo
+        direction: ASC
+```
 
 ## Contexto
 - O orquestrador classifica o relato livre do cidadão para o fluxo certo da [[Maria]] (ver [[Maria - atendimento automatizado]]).
 
 ## Histórico de reuniões
-- 2026-10-20: [[2026-10-20 - Reunião quinzenal]] (convidada; tarefas acima)
+- 2026-10-20: [[2026-10-20 - Reunião quinzenal]] (convidada; tarefas combinadas nessa reunião)
+
+## Conversas individuais
+```base
+filters:
+  and:
+    - 'tipo == "conversa-individual"'
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Conversas individuais
+    order:
+      - file.name
+      - data
+      - proxima_conversa
+```
 
 ## Treinamentos concluídos
 - 

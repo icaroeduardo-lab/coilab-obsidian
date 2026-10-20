@@ -199,6 +199,30 @@ views:
       - status
 ```
 
+## Pendências
+
+```base
+filters:
+  and:
+    - 'tipo == "tarefa"'
+    - 'status != "feita"'
+formulas:
+  situacao: 'if(status == "feita", "feita", if(prazo < today(), "atrasada", status))'
+views:
+  - type: table
+    name: Em aberto por prazo
+    order:
+      - file.name
+      - responsavel
+      - prazo
+      - formula.situacao
+    sort:
+      - property: note.prazo
+        direction: ASC
+```
+
+Detalhe por responsável em [[Pendências]] e [[Carga da equipe]].
+
 ## Pessoas
 
 ```base
@@ -215,5 +239,6 @@ views:
       - funcao
       - projetos
       - proxima_entrega
+      - ultima_conversa
       - entrada
 ```

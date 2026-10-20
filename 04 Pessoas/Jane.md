@@ -5,6 +5,7 @@ funcao:
 entrada: 
 projetos:
 proxima_entrega: 2026-11-05
+ultima_conversa: 
 tags:
   - pessoa
 ---
@@ -14,14 +15,49 @@ tags:
 > Função e data de entrada ainda não registradas: preencha quando souber.
 
 ## Tarefas atuais
-Combinadas em [[2026-10-20 - Reunião quinzenal]]; acompanhamento nas tarefas do iLab no Google Tarefas.
-- Elaboração e execução do curso para o NAD (prazo 05/11/2026)
+Tarefas em aberto desta pessoa (fonte: [[Pendências]]).
+
+```base
+filters:
+  and:
+    - 'tipo == "tarefa"'
+    - file.hasLink(this.file)
+    - 'status != "feita"'
+formulas:
+  situacao: 'if(status == "feita", "feita", if(prazo < today(), "atrasada", status))'
+views:
+  - type: table
+    name: Tarefas em aberto
+    order:
+      - file.name
+      - responsavel
+      - prazo
+      - formula.situacao
+    sort:
+      - property: note.prazo
+        direction: ASC
+```
 
 ## Contexto
 - A ata [[2026-10-16 - Serviços MarIA - CREDCESTA]] cita "a Jane na equipe de Tecnologia da Informação" como contato para validar o cadastro do número de teste. A confirmar se é a mesma pessoa.
 
 ## Histórico de reuniões
-- 2026-10-20: [[2026-10-20 - Reunião quinzenal]] (convidada; tarefas acima)
+- 2026-10-20: [[2026-10-20 - Reunião quinzenal]] (convidada; tarefas combinadas nessa reunião)
+
+## Conversas individuais
+```base
+filters:
+  and:
+    - 'tipo == "conversa-individual"'
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Conversas individuais
+    order:
+      - file.name
+      - data
+      - proxima_conversa
+```
 
 ## Treinamentos concluídos
 - 
