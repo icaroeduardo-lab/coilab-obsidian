@@ -205,11 +205,15 @@ views:
 filters:
   and:
     - file.inFolder("04 Pessoas")
+    - 'tipo == "pessoa"'
 views:
   - type: table
     name: Pessoas
     order:
       - file.name
+      - status
       - funcao
+      - projetos
+      - proxima_entrega
       - entrada
 ```
