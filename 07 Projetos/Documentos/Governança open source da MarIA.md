@@ -111,6 +111,13 @@ Proposta inicial; premissas a confirmar com o Braida estão marcadas.
 - Triagem semanal (reunião de quarta) e resposta em até 5 dias úteis; o que for síncrono vai para a reunião.
 - Teto de PRs de terceiros em revisão por sprint.
 
+### Respostas diretas (modelo recomendado: fork + upstream, adapters como plugin)
+- **Branch separada por defensoria?** Não no repositório central. Branch longa por defensoria vira divergência permanente e cada atualização do core vira merge manual. Cada defensoria trabalha no **próprio fork** e traz o que é reutilizável por PR; o que é só dela fica no plugin/adapter e na configuração (fluxos, petições e sumários no banco), sem tocar no core.
+- **Como o código muda se outra defensoria adaptar?** O core só muda se a adaptação exigir um novo ponto de extensão (interface). Nesse caso a defensoria propõe a interface por issue/PR; o resto é plugin no repositório dela. O Verde passa a ser só mais um adapter, mantido pela DPRJ.
+- **Como avaliar as modificações?** Em duas camadas: (1) esteira automática, incluindo os testes de contrato das interfaces; (2) revisão humana do mantenedor, com os critérios da seção 5 (serve a mais de uma defensoria, sem dependência de sistema específico, testes, documentação, Política de IA e LGPD).
+- **Feature reutilizável criada por outra defensoria?** Ela abre issue com a proposta, depois PR do fork para o core. Se passar nos critérios, entra com squash na `main` e sai na próxima release; todas as defensorias recebem ao atualizar. Se for específica, fica como plugin dela. A DPRJ também pode adotar o plugin de outra como "plugin da comunidade" mantido por quem o criou.
+- **GitHub ou GitLab?** Recomendação: **GitHub**, porque a MarIA já está na organização `dgd-dprj`, o fluxo de fork e PR é o mais conhecido por quem contribui de fora, e proteção de branch, `CODEOWNERS`, Actions e Dependabot cobrem a esteira. GitLab (de preferência instalado em infraestrutura própria) só faz sentido se houver exigência de soberania dos dados do código ou norma interna. O modelo acima funciona igual nos dois.
+
 ### Pontos técnicos a confirmar
 - O Ports and Adapters já existe no código ou há acoplamento ao Verde/Tykhe? (levantamento do Braida)
 - Monorepo com workspaces ou repositórios separados por adapter?
