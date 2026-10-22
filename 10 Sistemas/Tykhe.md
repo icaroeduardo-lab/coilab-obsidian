@@ -9,7 +9,7 @@ acesso_documentacao: exige login no TykheFlow (flow.tykhe.dev)
 autenticacao: Bearer JWT ou header access-token
 projetos:
   - "[[Maria - atendimento automatizado]]"
-atualizado_em: 2026-10-14
+atualizado_em: 2026-10-22
 tags:
   - sistema
 ---
@@ -49,13 +49,30 @@ Fonte: [[anexos/tykhe-swagger.json|tykhe-swagger.json]] (OpenAPI 3.0, exportado 
 - `accessToken`: header `access-token`, obtido na página de integrações do TykheFlow.
 
 ## Pontos de atenção
-- A documentação exige login. O anexo é uma cópia de 2026-10-14; conferir se mudou antes de usar como contrato.
+- A documentação exige login. O anexo é uma cópia de 2026-10-14; em 2026-10-22 a página foi salva de novo (HTML de cerca de 550 KB) e conferida por texto: mesmos grupos de rotas, sem rota nova. A comparação foi aproximada.
+- Esta documentação é a da **API REST da plataforma**. Ela **não** descreve os nós do construtor de fluxos (Chamada API, Variável, Troca de fluxo, Condição). O que sabemos deles vem do comportamento observado: ver "Construtor de fluxos" abaixo.
 - Mensagens e contatos carregam dado pessoal do cidadão. Nada disso vai para log nem para esta nota (LGPD).
 - `reopenedFromChatId` indica que uma conversa retomada ganha **chat novo**. Isso é coerente com a medição da issue #217 (nenhuma confirmação de TTL em produção): quem volta provavelmente chega à Maria com outro `chatId`.
 - `Chat.category` é o **setor** da fila na Tykhe. Pode ser o mapeamento natural do `tipoCaso` proposto na issue #225 (redirecionar para a Tykhe).
 
+## Como testar o fluxo "como se fosse o WhatsApp"
+- **A API REST não simula a pessoa.** `POST /messages` cria uma mensagem **passiva** (resposta ao cliente) com `whoSent` `agent`, `manager` ou `bot`: ela escreve **para** o cidadão, não **como** o cidadão. Não há rota para injetar uma mensagem recebida do cliente. `POST /customers` só cadastra o contato.
+- **Mensagem ativa** (`/activeMessageLists`, com `flowId`) dispara template para contatos de verdade pelo canal. Não usar para teste sem um número de teste do laboratório.
+- Caminhos de teste que não dependem dessa API:
+  1. **Maria**: chamar a API dela como a Tykhe chamaria (`/atendimentos/orquestrador`, `/atendimentos/respostas`), com `chatId` de teste e CPF fictício. Cobre o lado da Maria, não o comportamento dos nós.
+  2. **Tykhe**: executar o fluxo no próprio TykheFlow (teste do editor ou canal web). **Não verificado**: não temos a documentação desse recurso.
+- Ao testar pela Tykhe, observar: variável que sobra de uma conversa para outra (`clearEmptyVariable`), botões Sim/Não indo como `"true"`/`"false"`, resposta com aspas ou quebra de linha dentro do corpo JSON e `chatId` novo a cada conversa.
+
+## Construtor de fluxos (observado, não documentado)
+- Nó de **Chamada API**: opção `clearEmptyVariable`. Ligada, a variável ligada a um campo ausente na resposta é limpa; desligada, mantém o valor anterior (inferência pelo comportamento; confirmar com a Tykhe).
+- Nó de **variável**, operação `add`: se substitui ou concatena o valor ainda não foi confirmado.
+- Nó de **troca de fluxo** (subfluxo): se as variáveis passam entre os fluxos funciona no desenho atual, mas não está documentado.
+- Corpo JSON da Chamada API: o texto digitado entra no corpo por variável (`"{{Variável}}"`); aspas e quebras de linha podem quebrar o JSON. O CPF precisa ir entre aspas (`"{{CPF}}"`): sem aspas, a Maria aceita, mas ignora o valor (teste no release, 2026-10-22).
+
 ## Perguntas em aberto
-- [ ] Nas perguntas sim/não da Maria, a Tykhe manda sempre `"true"`/`"false"` dos botões, ou pode repassar texto digitado? (issue #227)
+- [ ] Nas perguntas sim/não da Maria, a Tykhe manda sempre `"true"`/`"false"` dos botões, ou pode repassar texto digitado? (issue #227). A Maria aceita "sim"/"não" digitados segundo o `docs/contrato-tykhe.md`; falta testar na Tykhe.
+- [ ] Onde estão as páginas dos nós do construtor de fluxos (o erro da API citou `docs.vendiz.com/api`)?
+- [ ] A Tykhe gera `chatId` novo a cada conversa do mesmo contato, mesmo após `concluido`/`handoff_humano`? (issue #228; a Maria responde 409 se o `chatId` encerrado receber mais respostas)
 - [ ] Contrato do status novo `redirecionado` + `tipoCaso` (issue #225): slug ou id de setor (`category`) da Tykhe?
 - [ ] Contato técnico do lado da Tykhe.
 
