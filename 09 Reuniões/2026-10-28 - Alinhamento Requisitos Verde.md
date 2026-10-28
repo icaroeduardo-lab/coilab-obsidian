@@ -11,7 +11,7 @@ convidados:
 falaram:
   - Talita Ribeiro
   - Diogo Leite Mesquita
-projeto: "[[Verde]]"
+projeto: Verde
 fonte: "Anotações do Gemini (e-mail de 28/10, 11h51)"
 tags:
   - reuniao
