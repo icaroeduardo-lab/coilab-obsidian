@@ -16,7 +16,6 @@ falaram:
   - ICARO LUIZ ALBAR EDUARDO
 projeto: "[[Compartilhamento da MarIA com a Bahia]]"
 fonte: https://docs.google.com/document/d/1cgpKEshcT5D7sN6A3HRqAT6-vfRmTFCnpTKSlBjCXyo/edit
-gravacao: 
 origem: anotações automáticas do Gemini (Google Meet)
 tags:
   - reuniao
