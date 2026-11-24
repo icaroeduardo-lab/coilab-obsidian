@@ -50,6 +50,7 @@ Definir e executar o modelo de transferência da MarIA para a DPBA: o que a Bahi
 - 2026-10-15: o fluxo de divórcio em diante entra direto no novo motor da MarIA ([[2026-10-15 - Compartilhamento MarIA - Melhores práticas]]).
 - 2026-10-16: a DPRJ vai ceder o código da MarIA para a DPBA ([[2026-10-16 - Compartilhamento MarIA]]).
 - 2026-10-16: Braida lista as tarefas de generalização e Gustavo estima PF e UST a partir dela.
+- 2026-11-09: sem repasse puro de código; a DPRJ entrega um conjunto mínimo de ajustes estruturais (Maria sem o Verde de ponta a ponta, Gov.BR desativável). Não se cria camada genérica de brokers: a adaptação fica com a empresa da DPBA ([[2026-11-09 - MarIA - DPBA]]).
 - Em aberto: modelo técnico de compartilhamento (centralizado, segregado ou híbrido) e volume de UST a consumir.
 
 ## Próximos passos
